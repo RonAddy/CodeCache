@@ -1,6 +1,6 @@
 class User < ApplicationRecord
 	
-	#this will help to vaalidate passwords before they are hashed and stored
+	#this will help to validate passwords before they are hashed and stored
 	# by saving the user input to the instance variable, the password will have to go through validation first
 	# allow nil for user inout that dows not need password input
 	validates :password,  length: (8..20), allow_nil: true

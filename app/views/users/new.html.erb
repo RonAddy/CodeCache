@@ -1,0 +1,23 @@
+<h2> Register an account </h2>
+
+<%= form_for @user do |form| %>
+  <%= form.text_field :username,
+        placeholder: 'Username',
+        required: true
+  %>
+  
+  <%= form.text_field :email,
+        placeholder: 'Email',
+        required: true
+  %>
+
+  <%= form.password_field :password,
+        placeholder: 'password',
+        required: true
+  %>
+
+  <%= submit_tag 'Create Account!' %>
+<% end %>
+
+<br>
+Returning user? <%= link_to 'Sign in', new_session_path %>

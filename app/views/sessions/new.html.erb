@@ -1,0 +1,12 @@
+<h2> Sign in! </h2>
+
+<%= form_for :user, url: session_path do |form| %>
+  <%= form.text_field :username, placeholder: 'Username', required: true %>
+  <%= form.text_field :email, placeholder: 'Email', required: true %>
+  <%= form.password_field :password, placeholder: 'password', required: true %>
+
+  <%= submit_tag 'Sign in!' %>
+<% end %>
+
+<br>
+New user? <%= link_to 'Register an account', new_user_path %>

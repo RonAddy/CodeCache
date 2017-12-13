@@ -11,7 +11,7 @@
   <body>
   	<div class="header">CodeCache</div>
 
-    <% if current_user %>
+    <% if @current_user %>
       <%= link_to current_user.username, user_path(current_user) %> signed in
       <%= button_to 'Log Out', session_path, method: :delete %>
     <% end %>
@@ -32,7 +32,7 @@
 
     <%= yield %>
     
-    <% if current_user %>
+    <% if @current_user %>
       <br><br>
       <%= link_to 'Users', users_path %>
     <% end %>
